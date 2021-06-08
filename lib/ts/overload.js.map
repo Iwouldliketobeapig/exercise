@@ -1,1 +1,0 @@
-{"version":3,"file":"overload.js","sourceRoot":"","sources":["../../ts/overload.ts"],"names":[],"mappings":";AAEA,SAAS,QAAQ,CAAC,CAAkB,EAAE,CAAkB;IACtD,IAAI,OAAO,CAAC,KAAK,QAAQ,IAAI,OAAO,CAAC,KAAK,QAAQ,EAAE;QAClD,OAAO,CAAC,GAAG,CAAC,CAAC;KACd;IACD,OAAO,CAAC,CAAC,QAAQ,EAAE,GAAG,CAAC,CAAC,QAAQ,EAAE,CAAC;AACrC,CAAC"}
