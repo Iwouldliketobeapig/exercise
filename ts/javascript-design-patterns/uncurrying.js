@@ -1,5 +1,3 @@
-import { Fun1 } from '../throttling';
-
 Function.prototype.uncurrying = function () {
   const _self = this;
   return function () {
@@ -9,9 +7,9 @@ Function.prototype.uncurrying = function () {
   }
 }
 
-const push: Fun1 = Array.prototype.push.uncurrying();
+const push = Array.prototype.push.uncurrying();
 
-(function(...args: any[]) {
+(function(...args) {
   push(arguments, 4);
   console.log(arguments);
 })(1, 2, 3)

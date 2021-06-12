@@ -1,0 +1,1 @@
+export type ArbitaryFun = (...args: any[] | never) => any | void;
