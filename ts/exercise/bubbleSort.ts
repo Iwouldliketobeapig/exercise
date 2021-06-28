@@ -1,3 +1,5 @@
+// 正序，依次相邻两元素对比，前面大则交换值
+
 function bubbleSort (arr: number[]): number[] {
   if (arr.length < 2) {
     return arr;

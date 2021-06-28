@@ -5,7 +5,7 @@
 import { Fun1, Fun2 } from './throttling';
 
 function antiShake (fun: Fun1, delay: number): Fun2 {
-  let timeId: number;
+  let timeId: any;
   return str => {
     clearTimeout(timeId);
     timeId = setTimeout(() => fun(str), delay);

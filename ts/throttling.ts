@@ -4,7 +4,7 @@ type Fun1 = (...args: any[] | never) => any | void;
 type Fun2 = (str: string) => void;
 
 function throttling (callback: Fun1, delay: number): Fun2 {
-  let timeId: number | null;
+  let timeId: any;
   return str => {
     if (timeId) return;
     timeId = setTimeout(() => {

@@ -1,0 +1,28 @@
+{
+  "name": "exercise",
+  "version": "1.0.0",
+  "description": "study execise",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^27.0.5"
+  },
+  "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "watch": "tsc -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Iwouldliketobeapig/exercise.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Iwouldliketobeapig/exercise/issues"
+  },
+  "homepage": "https://github.com/Iwouldliketobeapig/exercise#readme"
+}
