@@ -19,4 +19,4 @@ const insertSort: arrSortFun = function (arr) {
   return arr;
 }
 
-console.log(insertSort([1, 123, 12, 1, 12, 64]));
+console.log(insertSort([1, 123, 12, 1, 12, 64])); 
