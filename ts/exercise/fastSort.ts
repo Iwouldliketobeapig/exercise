@@ -1,3 +1,5 @@
+// 快速排序
+
 import { arrSortFun } from '../types/funTypes';
 
 const fastSort: arrSortFun = function (arr) {

@@ -1,4 +1,4 @@
-// 插入排序，在有序序列中插入为排序元素
+// 插入排序：插入排序，在有序序列中插入为排序元素
 
 import { arrSortFun } from '../types/funTypes';
 

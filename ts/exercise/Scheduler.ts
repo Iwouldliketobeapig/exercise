@@ -1,4 +1,4 @@
-// 
+// 调度控制
 
 function scheduler (limit: number) {
   let queue: any[] = [];

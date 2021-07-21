@@ -1,3 +1,5 @@
+// 深克隆
+
 import { anyObject } from '../types/funTypes';
 import { isObject } from '../utils/judage';
 
