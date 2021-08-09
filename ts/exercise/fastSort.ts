@@ -1,4 +1,4 @@
-// 快速排序
+// 快速排序，分治法，取任意值，及大小数组
 
 import { arrSortFun } from '../types/funTypes';
 

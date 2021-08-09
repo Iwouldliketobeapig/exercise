@@ -1,3 +1,4 @@
+// 二分查找
 function binarySearch (arr: number[], target: number, start: number = 0): number {
   console.log(arr, target, start);
   if (arr.length < 2) {

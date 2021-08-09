@@ -1,3 +1,4 @@
+// 归并排序
 import { arrSortFun } from '../types/funTypes';
 
 type numberArr = number[];
