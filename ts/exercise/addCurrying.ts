@@ -1,6 +1,8 @@
 const addCurring = (...args: (number)[]) => {
   let sum = args.reduce((current, last) => current + last);
-  const addSum = (num: number | void) => {
+  function addSum(num: void): number;
+  function addSum(num: number): any;
+  function addSum (num: any): any {
     if (num) {
       sum += num
       return addSum
