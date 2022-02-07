@@ -20,5 +20,15 @@ function upstairs2(stairs: number): number {
   return starsNum2[stairs]
 }
 
-console.log(upstairs(3));
-console.log(upstairs2(3));
+function upstairs3(stairs: number): number {
+  let res = 1, n1 = 1, n2 = 1;
+  for (let n = 2; n <= stairs; n++) {
+    res = n1 + n2;
+    n1 = n2;
+    n2 = res;
+  }
+  return res;
+}
+console.log(upstairs(10));
+console.log(upstairs2(10));
+console.log(upstairs3(10));
