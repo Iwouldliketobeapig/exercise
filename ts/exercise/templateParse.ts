@@ -15,7 +15,7 @@ interface Idata {
 
 
 function parse(template: string, data: Idata): string {
-  let computed = template.replace(/\{\{(\w+)\}\}/g, function <K extends keyof Idata>(match, key: K) {
+  let computed = template.replace(/\{\{(\w+)\}\}/g, function <K extends keyof Idata>(match: string, key: K) {
     return data[key] as string
   })
   return computed
