@@ -10,7 +10,9 @@
       "es5",
       "es2015.promise",
       "es2015",
-      "es2017"
+      "es2017",
+      "es2018",
+      "es2019"
     ], /* Specify library files to be included in the compilation. */
     "allowJs": true, /* Allow javascript files to be compiled. */
     // "checkJs": true,                       /* Report errors in .js files. */
@@ -67,6 +69,7 @@
     // "emitDecoratorMetadata": true,         /* Enables experimental support for emitting type metadata for decorators. */
     /* Advanced Options */
     "skipLibCheck": true, /* Skip type checking of declaration files. */
+    "downlevelIteration": true,
     "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */
   },
   "include": [
