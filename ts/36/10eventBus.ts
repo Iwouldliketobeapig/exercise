@@ -3,13 +3,14 @@ import { ObjectKey } from './9deepClone';
 type TFun = (...args: any[]) => any
 
 class EventBus {
-  state: ObjectKey;
+  state: Record<string, any>;
 
-  constructor () {
+  constructor() {
     this.state = {};
   }
 
-  on (event: string, fn: TFun) {
+  // 监听事件
+  on(event: string, fn: TFun) {
     if (this.state[event]) {
       this.state[event].push(fn)
     } else {
@@ -17,19 +18,21 @@ class EventBus {
     }
   }
 
-  off (event: string, fn: TFun) {
+  // 移出监听事件
+  off(event: string, fn: TFun) {
     if (this.state[event]) {
       const index = this.state[event].indexOf(fn);
       if (index !== -1) {
-        this.state[event] = this.state[event].splice(index, 1);
+        this.state[event].splice(index, 1);
       }
     }
   }
 
-  emit (event: string, ...args: any[]) {
+  // 触发事件
+  emit(event: string, ...args: any[]) {
     const evnets = this.state[event];
     if (evnets) {
-      for(let val of evnets) {
+      for (let val of evnets) {
         val(...args);
       }
     }
@@ -37,10 +40,10 @@ class EventBus {
 }
 
 let eventBus = new EventBus();
-let fn1 = function(name: string, age: string) {
+let fn1 = function (name: string, age: string) {
   console.log(name + age)
 }
-let fn2 = function(name: string, age: string) {
+let fn2 = function (name: string, age: string) {
   console.log(name + age + 'hellp')
 }
 

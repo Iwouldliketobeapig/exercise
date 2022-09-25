@@ -1,3 +1,13 @@
+
+// 判断函数否是_Promise的实例，如果是直接返回_Promise,否则返回_Promise.resolve(data);
+function isPromiseReslove (target) {
+  if (target?.constructor === _Promise) {
+    return target;
+  } else {
+    return _Promise.resolve(target)
+  }
+}
+
 class _Promise {
   PromiseState = 'pending';
   result = undefined;
@@ -54,7 +64,7 @@ class _Promise {
       if (thenFun) this.thenFun.push(thenFun);
       if (catchFun) this.catchFun.push(catchFun);
     } else if (this.PromiseState === 'fulfilled') {
-      return thenFun(this.result);
+      return isPromiseReslove(thenFun(this.result));
     } else if (catchFun) {
       return catchFun(this.result)
     }
@@ -121,4 +131,4 @@ function _Then2() {
 
 // _Promise.resolve(12354).then((res) => console.log(res));
 
-_Promise.all([_Then(), _Then2()]).then(res => console.log(res)).catch(err => console.log(err))
+_Promise.all([_Then(), _Then2(), 123]).then(res => console.log(res)).catch(err => console.log(err))

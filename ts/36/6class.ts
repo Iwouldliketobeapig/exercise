@@ -24,7 +24,8 @@ class Dog6 extends Animail6 {
     this.name = name;
   }
 
-  logName () {
+  logName() {
+    super.logFooter();
     console.log(this.name);
   }
 }
