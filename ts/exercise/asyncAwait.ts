@@ -22,6 +22,9 @@ function *myGenerator() {
 // })
 
 // 自动执行
+// 兼容基本类型
+// 缺少错误处理
+// 返回值是Promise
 const _async = (gen: any) => {
   var it = gen();
   
