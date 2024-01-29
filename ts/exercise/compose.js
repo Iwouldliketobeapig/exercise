@@ -1,4 +1,4 @@
-function compose(...funcs) {
+export default function compose(...funcs) {
   if (funcs.length === 0) {
     return arg => arg
   }
@@ -7,7 +7,7 @@ function compose(...funcs) {
     return funcs[0]
   }
 
-  return funcs.reduce((a, b) => (...args) => b(a(...args)))
+  return funcs.reduce((a, b) => (...args) => a(b(...args)))
 }
 
 function add (num) {
