@@ -1,4 +1,9 @@
 // 将中缀表达式转为前缀表达式
+// 1. 如果是number就处理number
+// 2. 如果是左括号就将左括号推到符号栈里面
+// 3. 如果是右括号，就一直取出知道遇到左括号，并推到result中
+// 4. 如果遇到高优先级算法，就将前面的所有算法取出并推入到result中，直到遇到左括号或者到顶
+// 5. 如果遇到低优先级算法，就将前面的所有同级算法取出并推到result中，直到遇到左括号或者到顶
 function transfer (judgeStr: string): (string | number | void)[] {
   let result = [];
   let curNum = 0;
