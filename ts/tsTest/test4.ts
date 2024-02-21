@@ -8,7 +8,7 @@ interface Example {
 // 
 
 type ConditionalPick<T, S> = {
-  [K in keyof T as T[K] extends S ? K : never]: T[K];
+  [key in keyof T as (T[key] extends S ? key : never)]: T[key];
 }
 
 // 测试用例：
